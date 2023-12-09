@@ -2,7 +2,7 @@
 
 A sleek demo showcasing AWS Amplify:
 
-✅ **Authentication:** Sign-up and sign-in.
+✅ **Authentication:** Sign-up and sign-in with cognito.
 
 🔄 **Real-Time Data:** GraphQL with AppSync.
 
