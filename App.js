@@ -1,20 +1,38 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Authenticator } from '@aws-amplify/ui-react-native';
 
-export default function App() {
+import { Amplify } from 'aws-amplify';
+import amplifyconfig from './src/amplifyconfiguration.json';
+import HomeScreen from './screens/HomeScreen';
+
+Amplify.configure(amplifyconfig);
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <Authenticator.Provider>
+      <Authenticator
+        components={{
+          SignUp: ({ fields, ...props }) => (
+            <Authenticator.SignUp
+              {...props}
+              fields={[
+                {
+                  name: "email",
+                  label: "Email",
+                  type: "email",
+                  placeholder: "Enter your Email"
+                },
+                ...fields
+              ]}
+            />
+          )
+        }}
+      >
+        <HomeScreen />
+      </Authenticator>
       <StatusBar style="auto" />
-    </View>
+    </Authenticator.Provider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
