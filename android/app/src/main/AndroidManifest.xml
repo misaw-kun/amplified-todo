@@ -26,11 +26,7 @@
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="com.wasim1912.amplifiedtodo"/>
-      </intent-filter>
-      <intent-filter>
-        <action android:name="android.intent.action.VIEW"/>
-        <category android:name="android.intent.category.DEFAULT"/>
-        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="exp+amplified-todos"/>
         <data android:scheme="myapp"/>
       </intent-filter>
     </activity>
