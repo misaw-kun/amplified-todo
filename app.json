@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "amplified-todo",
-    "slug": "amplified-todo",
+    "slug": "amplified-todos",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -26,6 +26,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f9757938-bbe6-4a50-94b5-ae965815dd41"
+      }
+    },
+    "owner": "wasim1912"
   }
 }
